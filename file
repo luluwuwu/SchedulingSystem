@@ -1,1 +1,22 @@
+## Scheduling System
+This program generates a work schedule that takes into account for types of workers, 
+worker availability, and allow for shift swapping between workers. This program also allows
+customized scheduling for instance the desired amount of workers scheduled per hour. 
 
+### User Story
+A user can provide the amount of workers needed to be scheduled during the designated working 
+hours to generate working schedules.
+A user can check the availability of the worker and assign shifts accordingly.
+
+### Design Patterns
+Two Strategy patterns exists in the current implementation.
+1. Scheduling Strategies
+   This Strategy design pattern allows for extension for different types of scheduling. 
+    For instance holiday hours that are more busy, and hence may require irregular working conditions.
+- Regular Scheduling Strategy: To schedule under regular conditions. 
+(normal working hours, static required amount of workers per hour.)
+2. Printing Strategies
+    This Strategy design pattern allows for extension for different types of schedule printing.
+    For instance, print personalized schedule for workers, or generalized schedule for managers.
+- Regular Printing Strategy: To print schedule under normal conditions.
+  (regular prompts for shiftDetails and breaks.
